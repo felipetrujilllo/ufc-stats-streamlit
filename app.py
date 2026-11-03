@@ -21,7 +21,7 @@ def method_group(m):
 
 @st.cache_data
 def load_data():
-    fights = pd.read_csv("data/ufc_fight_results.csv").apply(lambda c: c.str.strip() if c.dtype == object else c)
+    fights = pd.read_csv("data/ufc_fight_results.csv").apply(lambda c: c.str.strip() if pd.api.types.is_string_dtype(c) else c)
     events = pd.read_csv("data/ufc_event_details.csv").apply(lambda c: c.str.strip())
     events = events.drop_duplicates("EVENT")[["EVENT", "DATE"]]
     # A handful of events are missing from the events file; they have no date, so they i dropped them.
