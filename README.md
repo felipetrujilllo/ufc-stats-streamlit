@@ -2,7 +2,7 @@
 
 A Streamlit app for exploring how UFC fights end (knockout, submission, or decision) and how that has changed from 1994 to 2026.
 
-**Live app:** _add your Streamlit Community Cloud URL here_
+**Live app:** https://ufc-stats-app-4crebgqkd79kw36wzqbjw9.streamlit.app/
 
 ## Purpose
 
@@ -39,12 +39,3 @@ pip install pytest
 pytest
 ```
 
-## Deploy
-
-1. Push this repo to GitHub.
-2. Go to [share.streamlit.io](https://share.streamlit.io), click **Create app**, and select this repo with branch `main` and main file `app.py`.
-3. Copy the public URL into the **Live app** line at the top of this README.
-
-## Project management
-
-The project was built in three short Scrum-style sprints. Each user story is a GitHub Issue that a commit closes. See [AGILE.md](AGILE.md) for the backlog, sprints, and retrospective.
