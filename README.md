@@ -1,6 +1,6 @@
 # UFC Fight Explorer
 
-An interactive Streamlit app for exploring how UFC fights end (knockout, submission, or decision) and how that has changed from 1994 to 2026.
+A Streamlit app for exploring how UFC fights end (knockout, submission, or decision) and how that has changed from 1994 to 2026.
 
 **Live app:** _add your Streamlit Community Cloud URL here_
 
@@ -11,11 +11,6 @@ The app shows how to visualize and interact with a real dataset in Python. It an
 ## Dataset
 
 Two CSVs in [`data/`](data/) come from **ufcstats.com**, the UFC's official stats site, through the public [scrape_ufc_stats](https://github.com/Greco1899/scrape_ufc_stats) project. The app merges them on the event name.
-
-| File | Rows | Columns used |
-|---|---|---|
-| [`ufc_fight_results.csv`](data/ufc_fight_results.csv) | ~9,000 fights | `EVENT`, `BOUT` (fighter names), `OUTCOME` (W/L, L/W, draw, no contest), `WEIGHTCLASS`, `METHOD`, `ROUND` |
-| [`ufc_event_details.csv`](data/ufc_event_details.csv) | ~800 events | `EVENT`, `DATE` |
 
 When the app loads, it groups methods into KO/TKO, Submission, Decision, and Other. It also folds title and non-title bouts into one weight class and finds the winner from `OUTCOME`. Three events have no date in the events file, so their fights are left out.
 
