@@ -56,7 +56,7 @@ fig = px.scatter(
     title=f"Life Expectancy vs. GDP per Capita ({year})",
     labels={"gdpPercap": "GDP per capita (US$, inflation-adjusted)", "lifeExp": "Life expectancy (years)", "continent": "Continent"},
 )
-st.plotly_chart(fig, width="stretch")
+st.plotly_chart(fig)
 
 st.subheader("Life expectancy over time by continent")
 trend = df[df.continent.isin(continents)].groupby(["year", "continent"], as_index=False).lifeExp.mean()
@@ -69,7 +69,7 @@ fig2 = px.line(
     title="Average Life Expectancy by Continent, 1952–2007",
     labels={"year": "Year", "lifeExp": "Average life expectancy (years)", "continent": "Continent"},
 )
-st.plotly_chart(fig2, width="stretch")
+st.plotly_chart(fig2)
 
 with st.expander("Show raw data"):
     st.dataframe(filtered.sort_values("lifeExp", ascending=False), width="stretch", hide_index=True)
